@@ -39,6 +39,6 @@ https://spring.io/guides
 * @RestControllerAdvice 이용하는 예제 - ApiException, ApiExceptionHandler, UserController
 
 ## vue.js
-src/main/webapp/README 참조  
+src/main/webapp/README 참조(https://github.com/hojin99/springboot_vuejs/blob/main/src/main/webapp/README.md)  
 
 
