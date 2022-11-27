@@ -1,4 +1,5 @@
 # springboot + vue.js
+spring boot, vue.js 기본 사용법에 대한 테스트 용도  
 
 ## spring boot
 
@@ -38,7 +39,6 @@ https://spring.io/guides
 * @RestControllerAdvice 이용하는 예제 - ApiException, ApiExceptionHandler, UserController
 
 ## vue.js
-
-### 
+src/main/webapp/README 참조  
 
 
