@@ -1,0 +1,33 @@
+server:
+  port: 19001
+
+schedule:
+  logging-task: false
+  self-logging-task: false
+  retry-task: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:10300/sb_db
+    username: sb
+    password: djsjffkdlwj!1
+    hikari:
+      jdbc-url: ${spring.datasource.url}
+      poolName: sb_db
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      minimumIdle: 0
+      idleTimeout: 600000
+      connectionTimeout: 30000
+      leak-detection-threshold: 600000 # 너무 작은 값이면 leak로 판단, max-lifetime 보다 작게
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  configuration:
+    default-statement-timeout: 300
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+    call-setters-on-nulls: true
+  configuration-properties:
+    schema-name: public.
+  type-aliases-package: com.hj.study.vo

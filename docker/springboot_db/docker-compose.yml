@@ -1,0 +1,12 @@
+version: '2'
+services:
+  db:
+    image: sb_db:latest 
+    container_name: sb_db 
+    ports:
+      - '10300:5432' 
+    volumes:
+      - sb_db_data:/var/lib/postgresql/data
+    # restart: always
+volumes:
+  sb_db_data:
