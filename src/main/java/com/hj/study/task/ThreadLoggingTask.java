@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 @Slf4j
 @Component
 @ConditionalOnExpression("${schedule.self-logging-task:true}")
-public class SelfLoggingTask {
+public class ThreadLoggingTask {
 
     private ThreadPoolTaskScheduler scheduler;
 

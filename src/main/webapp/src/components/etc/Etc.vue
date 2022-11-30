@@ -1,6 +1,7 @@
 <template>
   <div>
     {{message}}
+    <b-button>Button</b-button>
     <div v-for="bld in bldList" :key="bld.bld_adm_cd">{{bld.bld_name}}</div>
   </div>
 </template>
@@ -20,11 +21,12 @@ export default {
 
     this.hello();
 
-    // this.listBld();
+    this.listBld();
 
   },
   methods: {
     hello() {
+      // http://localhost:19002/hello?userIds=1&userIds=2
       const params = {userIds:[1,2]};
       const myAxios = axios.create({
         paramsSerializer: params => qs.stringify(params, {arrayFormat: 'repeat'})
