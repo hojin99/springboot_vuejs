@@ -30,6 +30,7 @@ export default {
         {index:11, name:'Directive', path:"/directive"},
         {index:12, name:'Plugin', path:"/plugin"},
         {index:13, name:'Filter', path:"/filter"},
+        {index:17, name:'BootStrap', path:"/bootstrap"},
         {index:15, name:'Etc', path:"/etc"},
       ],
       activeName: '/bind',

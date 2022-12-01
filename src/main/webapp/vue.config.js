@@ -1,11 +1,19 @@
 module.exports = {
-    // css: {
-    //     loaderOptions: {
-    //         sass: {
-    //             additionalData: `@import "~@/variables.sass"`
-    //           },
-    //     }
+    configureWebpack: {
+        performance: {
+            hints: false
+        },
+    },
+    // chainWebpack: config => {
     // },
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `
+                `
+              },
+        }
+    },
     devServer: {
         port: 19002,
         proxy: {

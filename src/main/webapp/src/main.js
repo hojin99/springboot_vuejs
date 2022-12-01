@@ -17,7 +17,7 @@ Vue.prototype.$confirm = ElementUI.MessageBox.confirm;
 Vue.prototype.$prompt = ElementUI.MessageBox.prompt;
 
 // bootstrap
-import './scss/app.scss';
+import '@/scss/app.scss';
 
 import { BootstrapVue } from 'bootstrap-vue';
 Vue.use(BootstrapVue);

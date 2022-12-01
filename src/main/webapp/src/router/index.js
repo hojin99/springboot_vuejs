@@ -17,6 +17,7 @@ import Filter from '@/components/filter/Filter.vue';
 import Vuex from '@/components/vuex/Vuex.vue';
 import Etc from '@/components/etc/Etc.vue';
 import Comp from '@/components/component/Component.vue';
+import BootStrap from '@/components/bootstrap/BootStrap.vue';
 
 Vue.use(Router);
 
@@ -41,5 +42,6 @@ export default new Router({
         {name:'Vuex', path:"/vuex", component:Vuex},
         {name:'Etc', path:"/etc", component:Etc},
         {name:'Component', path:"/component", component:Comp},
+        {name:'BootStrap', path:"/bootstrap", component:BootStrap},
       ]
 })

@@ -30,8 +30,7 @@ https://vue-loader.vuejs.org/guide/
 https://router.vuejs.org/  
 https://vuex.vuejs.org/guide/  
 
-### bind
+### 
 
-### component
 
 
