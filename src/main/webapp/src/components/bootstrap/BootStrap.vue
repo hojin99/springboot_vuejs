@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <b-button class="mb-2" variant="primary" @click="$bvToast.show('example-toast')">
       Show toast
     </b-button>    
