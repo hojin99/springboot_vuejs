@@ -48,6 +48,15 @@ export default {
     }
   },
   mounted() {
+        // cookie set, get 테스트 (hj cookie가 없으면 생성)
+        // this.$cookies.remove('hj');
+        let cookie = this.$cookies.get('hj');
+        console.log(`cookie1 : ` + cookie);
+
+        if(!cookie) 
+          cookie = this.$cookies.set('hj', 'test').get('hj');
+        console.log(`cookie2 : ` + cookie);
+
         this.navigate();
   }
 }
