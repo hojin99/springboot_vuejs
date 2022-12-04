@@ -1,7 +1,10 @@
 <template>
   <div>
     {{message}}
-    <b-button>Button</b-button>
+    <font-awesome-icon icon="fa-solid fa-user-secret" />
+    <font-awesome-icon icon="fa-brands fa-twitter" />
+    <font-awesome-icon icon="fa-regular fa-hospital" />
+   
     <div v-for="bld in bldList" :key="bld.bld_adm_cd">{{bld.bld_name}}</div>
   </div>
 </template>
@@ -9,6 +12,7 @@
 <script>
 import axios from 'axios';
 import qs from 'qs';
+
 
 export default {
   data() {
@@ -20,7 +24,6 @@ export default {
   mounted() {
 
     this.hello();
-
     this.listBld();
 
   },
@@ -50,6 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 
 </style>

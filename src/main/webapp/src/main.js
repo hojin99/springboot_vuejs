@@ -4,6 +4,9 @@ import router from './router';
 import store from './store';
 import i18n from './assets/i18n/i18n';
 
+// fontawsome icon
+import './fontawesome.js';
+
 // element-ui
 import 'element-ui/lib/theme-chalk/index.css';
 

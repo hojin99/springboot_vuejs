@@ -1,0 +1,5 @@
+@mixin iw-ellipsis-text($max-width) {
+    max-width: $max-width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

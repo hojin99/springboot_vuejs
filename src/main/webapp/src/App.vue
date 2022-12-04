@@ -1,10 +1,26 @@
 <template>
   <div id="app">
-        <el-tabs v-model="activeName" @tab-click="navigate">
-            <el-tab-pane v-for="menu in menuList" :label="menu.name" :name="menu.path" :key="menu.index"></el-tab-pane>
-        </el-tabs>
-        <router-view></router-view>
+    <b-navbar type="dark" variant="info">
+      <b-navbar-brand href="#">Vue Test</b-navbar-brand>
+
+      <b-navbar-nav>
+        <b-nav-item-dropdown text="Framwork" right>
+          <b-dropdown-item v-for="menu in frameworkMenuList" @click="navigate(menu.path)" :key="menu.index">{{menu.name}}</b-dropdown-item>
+        </b-nav-item-dropdown>       
+        <b-nav-item-dropdown text="Library" right>
+          <b-dropdown-item v-for="menu in libraryMenuList" @click="navigate(menu.path)" :key="menu.index">{{menu.name}}</b-dropdown-item>
+        </b-nav-item-dropdown>       
+        <b-nav-item-dropdown text="Application" right>
+          <b-dropdown-item v-for="menu in applicationMenuList" @click="navigate(menu.path)" :key="menu.index">{{menu.name}}</b-dropdown-item>
+        </b-nav-item-dropdown>                  
+      </b-navbar-nav>   
+    </b-navbar>
+    <b-navbar type="dark" variant="dark" style="height:30px">
+      <b-navbar-brand href="#">{{beforeActive}}</b-navbar-brand>
+    </b-navbar>      
+    <router-view></router-view>
   </div>
+
 </template>
 
 <script>
@@ -13,9 +29,9 @@ export default {
   name: 'App',
   data() {
     return {
-      menuList: [
+      frameworkMenuList: [
         {index:0, name:'Bind', path:"/bind"},
-        {index:16, name:'Component', path:"/component"},
+        {index:15, name:'Component', path:"/component"},
         {index:14, name:'Vuex', path:"/vuex"},        
         {index:1, name:'Event', path:"/event"},
         {index:2, name:'Lifecycle', path:"/lifecycle"},
@@ -30,21 +46,28 @@ export default {
         {index:11, name:'Directive', path:"/directive"},
         {index:12, name:'Plugin', path:"/plugin"},
         {index:13, name:'Filter', path:"/filter"},
-        {index:17, name:'BootStrap', path:"/bootstrap"},
-        {index:15, name:'Etc', path:"/etc"},
+      ],      
+      libraryMenuList: [
+        {index:0, name:'BootStrap', path:"/bootstrap"},
+        {index:1, name:'FontAweSome', path:"/fontawesome"},
+        {index:2, name:'Tooltip', path:"/tooltip"},
       ],
-      activeName: '/bind',
+      applicationMenuList: [
+        {index:0, name:'List', path:"/list"},
+      ],      
       beforeActive: ''
     }
   },
   methods: {
     // 메뉴 이동
-    navigate() {
-        if(this.beforeActive !== this.activeName) {
-            console.log(`route to ${this.activeName}`);
-            this.$router.push(this.activeName);
-            this.beforeActive = this.activeName;
-        }
+    navigate(path) {
+
+      if(this.beforeActive !== path) {
+        console.log(`route to ${path}`);
+        this.$router.push(path);
+        this.beforeActive = path;
+      }
+
     }
   },
   mounted() {
@@ -57,7 +80,7 @@ export default {
           cookie = this.$cookies.set('hj', 'test').get('hj');
         console.log(`cookie2 : ` + cookie);
 
-        this.navigate();
+        this.navigate('/bind');
   }
 }
 </script>

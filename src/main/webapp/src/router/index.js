@@ -15,9 +15,11 @@ import Directive from '@/components/directive/Directive.vue';
 import Plugin from '@/components/plugin/Plugin.vue';
 import Filter from '@/components/filter/Filter.vue';
 import Vuex from '@/components/vuex/Vuex.vue';
-import Etc from '@/components/etc/Etc.vue';
+import FontAweSome from '@/components/fontawesome/FontAweSome.vue';
 import Comp from '@/components/component/Component.vue';
 import BootStrap from '@/components/bootstrap/BootStrap.vue';
+import Tooltip from '@/components/tooltip/Tooltip.vue';
+import List from '@/components/list/List.vue';
 
 Vue.use(Router);
 
@@ -40,8 +42,10 @@ export default new Router({
         {name:'Plugin', path:"/plugin", component:Plugin},
         {name:'Filter', path:"/filter", component:Filter},
         {name:'Vuex', path:"/vuex", component:Vuex},
-        {name:'Etc', path:"/etc", component:Etc},
+        {name:'FontAweSome', path:"/fontawesome", component:FontAweSome},
         {name:'Component', path:"/component", component:Comp},
         {name:'BootStrap', path:"/bootstrap", component:BootStrap},
+        {name:'Tooltip', path:"/tooltip", component:Tooltip},
+        {name:'List', path:"/list", component:List},
       ]
 })
