@@ -1,5 +1,15 @@
+$iw-gray-300: #cac8cc;
+
+
 @mixin iw-ellipsis-text($max-width) {
     max-width: $max-width;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@mixin iw-border($top: 1px , $right: 1px, $bottom: 1px, $left: 1px, $color: $iw-line-color) {
+    border-top: solid $top $color;
+    border-right: solid $right $color;
+    border-bottom: solid $bottom $color;
+    border-left: solid $left $color;
 }
