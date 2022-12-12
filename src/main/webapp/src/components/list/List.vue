@@ -1,6 +1,19 @@
 <template>
   <div>
-        <ul class="iw-dropdown-menu">
+        <b-form-input
+            v-model="value"
+            autocomplete="off"
+            placeholder="찾기"
+            ref="input"
+            @blur="onInputBlur"
+            @focus="onInputFocus"
+            @keydown="onInputKeydown"
+        />
+
+        <ul class="iw-dropdown-menu" 
+            :style="{ 'show': dropdownShow }"
+            ref="menu">
+
             <virtual-list
                 class="iw-menu-inner"
                 style="height:150px"
@@ -17,24 +30,15 @@
                     </b-dropdown-item>
                 </template>
             </virtual-list>
+
         </ul>   
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
   </div>
 </template>
 
 <script>
 import VirtualList from './VirtualList.vue';
+import { createPopper } from '@popperjs/core';
 
 export default {
     components: { 
@@ -61,9 +65,61 @@ export default {
                 {'id':'8', 'name':'이순신4'},                             
                 ],
             rowHeight: 22,
-            textKey: "name"
+            textKey: "name",
+            value: undefined,
+            popper: undefined,
+            isInputFocused: false
         }
-    }
+    },
+    computed: {
+        dropdownShow() {
+            return this.isInputFocused;
+        }
+    },
+    methods: {
+        clearValue() {
+
+        },
+        onInputBlur() {
+            this.isInputFocused = false;
+            this.destroyPopper();
+        },
+        onInputFocus() {
+            this.isInputFocused = true;
+            this.createPopper();
+        },
+        onInputKeydown(evt) {
+            if(evt.key === 'Enter')
+                this.$refs.input.$el.blur();
+
+        },
+        createPopper() {
+            console.log('createPopper');
+            console.log(this.$refs.input.$el);
+            console.log(this.$refs.menu);
+
+            this.popper = createPopper(
+                this.$refs.input.$el,
+                this.$refs.menu,
+                {
+                    placement: 'bottom-start',
+                    modifiers: [
+                        {
+                            name: 'offset',
+                            options: {
+                                offset: [0, 2],
+                            }
+                        }
+                    ]
+                }
+            );
+        },
+        destroyPopper() {
+            console.log('destroyPopper');
+            this.popper.destroy();
+            this.popper = undefined;
+        }
+  }
 
 }
 </script>
