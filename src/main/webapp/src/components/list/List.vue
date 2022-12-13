@@ -11,7 +11,7 @@
         />
 
         <ul class="iw-dropdown-menu" 
-            :style="{ 'show': dropdownShow }"
+            :style="{ 'display': dropdownShow }"
             ref="menu">
 
             <virtual-list
@@ -73,7 +73,7 @@ export default {
     },
     computed: {
         dropdownShow() {
-            return this.isInputFocused;
+            return this.isInputFocused ? 'block' : 'none';
         }
     },
     methods: {
