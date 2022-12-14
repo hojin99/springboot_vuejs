@@ -51,7 +51,7 @@
         </b-input-group>
     </b-form-group>
 
-    {{$t('button.add')}}
+
     <b-button class="mb-2" variant="primary" @click="$bvToast.show('example-toast')">
       Show toast
     </b-button>    

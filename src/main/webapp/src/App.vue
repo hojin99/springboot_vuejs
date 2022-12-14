@@ -51,6 +51,8 @@ export default {
         {index:0, name:'BootStrap', path:"/bootstrap"},
         {index:1, name:'FontAweSome', path:"/fontawesome"},
         {index:2, name:'Tooltip', path:"/tooltip"},
+        {index:3, name:'I18n', path:"/i18n"},
+        {index:4, name:'Axios', path:"/axios"},
       ],
       applicationMenuList: [
         {index:0, name:'List', path:"/list"},
