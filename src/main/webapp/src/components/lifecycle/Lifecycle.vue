@@ -9,7 +9,7 @@
     <br>    
     
     <label>입력: </label><input v-model="message"><br>
-    <label>출력: </label>{{message}}
+    <label>출력: </label> {{message}}
 
     <h3>child component</h3>
     <hj-child></hj-child>

@@ -22,6 +22,7 @@ import Tooltip from '@/components/tooltip/Tooltip.vue';
 import List from '@/components/list/List.vue';
 import I18n from '@/components/i18n/I18n.vue';
 import Axios from '@/components/comm/Axios.vue';
+import ReActive from '@/components/reactive/ReActive.vue';
 
 Vue.use(Router);
 
@@ -51,5 +52,6 @@ export default new Router({
         {name:'List', path:"/list", component:List},
         {name:'I18n', path:"/i18n", component:I18n},
         {name:'Axios', path:"/axios", component:Axios},
+        {name:'ReActive', path:"/reactive", component:ReActive},
       ]
 })

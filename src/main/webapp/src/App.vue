@@ -46,6 +46,7 @@ export default {
         {index:11, name:'Directive', path:"/directive"},
         {index:12, name:'Plugin', path:"/plugin"},
         {index:13, name:'Filter', path:"/filter"},
+        {index:16, name:'Reactive', path:"/reactive"},
       ],      
       libraryMenuList: [
         {index:0, name:'BootStrap', path:"/bootstrap"},
