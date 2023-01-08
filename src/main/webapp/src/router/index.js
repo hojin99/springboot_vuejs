@@ -19,10 +19,12 @@ import FontAweSome from '@/components/fontawesome/FontAweSome.vue';
 import Comp from '@/components/component/Component.vue';
 import BootStrap from '@/components/bootstrap/BootStrap.vue';
 import Tooltip from '@/components/tooltip/Tooltip.vue';
-import List from '@/components/list/List.vue';
+import List from '@/components/app/List.vue';
 import I18n from '@/components/i18n/I18n.vue';
 import Axios from '@/components/comm/Axios.vue';
 import ReActive from '@/components/reactive/ReActive.vue';
+import Navigator from '@/components/app/Navigator.vue';
+
 
 Vue.use(Router);
 
@@ -50,6 +52,7 @@ export default new Router({
         {name:'BootStrap', path:"/bootstrap", component:BootStrap},
         {name:'Tooltip', path:"/tooltip", component:Tooltip},
         {name:'List', path:"/list", component:List},
+        {name:'Navigator', path:"/navigator", component:Navigator},
         {name:'I18n', path:"/i18n", component:I18n},
         {name:'Axios', path:"/axios", component:Axios},
         {name:'ReActive', path:"/reactive", component:ReActive},

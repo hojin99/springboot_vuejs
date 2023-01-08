@@ -57,6 +57,7 @@ export default {
       ],
       applicationMenuList: [
         {index:0, name:'List', path:"/list"},
+        {index:1, name:'Navigator', path:"/navigator"},
       ],      
       beforeActive: ''
     }

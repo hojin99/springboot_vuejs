@@ -110,7 +110,7 @@ export default {
         margin: 0;
     }
     ::v-deep .iw-input-group-btn {
-        @include iw-border(1px, 1px, 1px, 0, $iw-gray-300);
+        @include hj-border(1px, 1px, 1px, 0, $hj-gray-300);
     }
 }
 </style>

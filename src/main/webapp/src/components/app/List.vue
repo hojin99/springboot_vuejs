@@ -142,7 +142,7 @@ export default {
                 padding: 1px 1rem;
             }
             .iw-item-content {
-                @include iw-ellipsis-text(calc(#{$iw-max-width} - 2rem));
+                @include hj-ellipsis-text(calc(#{$iw-max-width} - 2rem));
             }
         }
     }
